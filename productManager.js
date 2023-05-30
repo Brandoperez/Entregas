@@ -15,22 +15,24 @@ class ProductManager{
             thumbnail,
             code,
             stock
-        }
+        } 
 
-        if(this.products.length===0){
+        if(this.products.length === 0){
             producto.id = 1;
-        }else{
+
+        }
+        else{
             producto.id = this.products[this.products.length -1].id+1
         }
             this.products.push({
                 ...producto,
-                id:this.products[this.products.length -1]+1
+                id:this.products[this.products.length-1]+1
             });
         
-
-        for(let i = 0; i < producto.length; i++){
-                console.log(producto[i]);
-        }
+        for(let i = 0; i < this.products.length; i++){
+                        console.log(this.products[i]);
+                }
+        
     }
     getProductById=()=>{
         if (!this.products.find((producto) => producto.id === id)){
@@ -46,6 +48,7 @@ class ProductManager{
 
 creadorProductos = new ProductManager();
 
-creadorProductos.addProduct("NuevoProducto1", "Este es un producto de prueba 2", 5000, "Sin imagen", "123def", 7);
+creadorProductos.addProduct("NuevoProducto1", "Este es un producto de prueba 1", 5000, "Sin imagen", "123def", 7);
+creadorProductos.addProduct("NuevoProducto2", "Este es un producto de prueba 2", 3000, "Sin imagen", "456ghj", 2);
 
 
