@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Licuadora",
+        "description": "La mejor licuadora del mercado",
+        "price": 20000,
+        "thumbail": "Sin imagen",
+        "code": "abc123",
+        "stock": 12
+    },
+    {
+        "title": "Microondas",
+        "description": "El mejor microondas del mercado",
+        "price": 30000,
+        "thumbail": "Sin imagen",
+        "code": "def567",
+        "stock": 6
+    },
+    {
+        "title": "Heladera",
+        "description": "La mejor heladera del mercado",
+        "price": 89000,
+        "thumbail": "Sin imagen",
+        "code": "jkc657",
+        "stock": 8
+    }
+]
