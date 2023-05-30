@@ -16,28 +16,36 @@ class ProductManager{
             code,
             stock
         }
+
         if(this.products.length===0){
             producto.id = 1;
         }else{
             producto.id = this.products[this.products.length -1].id+1
         }
-            this.products.push(producto)
-           
+            this.products.push({
+                ...producto,
+                id:this.products[this.products.length -1]+1
+            });
+        
+
+        for(let i = 0; i < producto.length; i++){
+                console.log(producto[i]);
+        }
     }
-    getProductById=(idProducto)=>{
-        const productoID = this.products.findIndex(e=>e.id === idProducto);
-        if(productoID === -1){
+    getProductById=()=>{
+        if (!this.products.find((producto) => producto.id === id)){
             console.log("El producto no pudo ser encontrado");
         }else{
-            console.log("Se encontró el producto");
+            console.log(this.products.find((producto) => producto.id === id)) 
         }
-        this.products[productoID].push(idProducto);
     }
 
 }
 
-const Producto1 = new ProductManager();
-console.log(Producto1.addProduct("NuevoProducto", "Este es un producto de prueba", 3000, "Sin imagen", "123abc", 23));
 
-const Producto2 = new ProductManager();
-console.log(Producto2.addProduct("NuevoProducto2", "Este es un producto de prueba 2", 5000, "Sin imagen", "123def", 23));
+
+creadorProductos = new ProductManager();
+
+creadorProductos.addProduct("NuevoProducto1", "Este es un producto de prueba 2", 5000, "Sin imagen", "123def", 7);
+
+
