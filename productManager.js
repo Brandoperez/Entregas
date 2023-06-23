@@ -20,7 +20,7 @@ export default class ProductManager{
 
 
 
-   /* addProduct= async (producto)=>{
+   addProduct= async (producto)=>{
         const producto = await this.getProducts();
             if(producto.length === 0){
                 producto.id = 1
@@ -31,11 +31,8 @@ export default class ProductManager{
                 producto.push(producto)
                 await fs.promises.writeFile(this.path, JSON.stringify(productos, null, '/T'))
                 return producto
-
-       
-
-        
-    }*/
+            }
+            
     getProductById=()=>{
         if (!this.products.find((producto) => producto.id === id)){
             console.log("El producto no pudo ser encontrado");

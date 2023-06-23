@@ -1,4 +1,4 @@
-class PproductManager{
+class ProductManager{
     constructor(){
         this.products = []
     }
